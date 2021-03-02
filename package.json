@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/sclark417/buildaburger/issues"
   },
-  "homepage": "https://github.com/sclark417/buildaburger#readme"
+  "homepage": "https://github.com/sclark417/buildaburger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7"
+  }
 }
