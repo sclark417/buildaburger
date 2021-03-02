@@ -1,0 +1,36 @@
+<h1>Burgers</h1>
+<div class="card-group">
+  <div class="col-5 burgerCard card">
+    <h2>Burgers that have not been Eaten:</h2>
+
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
+      {{> burgers/burger-block devoured=0}}
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="col-5 burgerCard card">
+    <h2>DEVOURED Burgers!</h2>
+
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> burgers/burger-block devoured=1}}
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+<h2>Add a Burger</h2>
+<form id="create-form">
+
+  <div class="form-group">
+    <label form="burgerName">Burger name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <button type="submit">Add Burger?</button>
+</form>
